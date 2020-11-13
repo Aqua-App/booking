@@ -11,8 +11,8 @@ function App() {
 
   useEffect(() => {
     let url = window.location.href;
-
-    axios.get('/api/homes/75/reservation')
+    // need to be able to grab specific id from proxy server
+    axios.get('/api/homes/:id/reservation')
       .then((res) => {
         let data = res.data[0];
         setPrice(data.pricePerNight);
